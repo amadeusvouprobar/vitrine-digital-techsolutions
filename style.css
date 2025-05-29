@@ -1,0 +1,243 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #72c6ef 0%, #0052d4 100%); /* Gradiente céu azul */
+    color: #1f2937; /* Texto escuro para contraste */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.3); /* Branco translúcido - efeito vidro */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #003366; /* Azul escuro para o texto do cabeçalho */
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5); /* Borda brilhante */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem; /* Hierarquia visual */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+header .subtitle {
+    margin: 0.5rem 0 0;
+    font-size: 1.1rem;
+    color: #004080;
+}
+
+main {
+    width: 90%;
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 15px;
+    flex-grow: 1;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.8); /* Fundo de seção branco semi-transparente */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+section h2 {
+    color: #0052d4; /* Azul primário Frutiger */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #67b26f; /* Verde como cor de destaque na borda */
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Seção de Palestrantes */
+#speakers .speaker-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+#speakers .speaker {
+    background-color: rgba(230, 240, 255, 0.7); /* Azul claro translúcido */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#speakers .speaker:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 82, 212, 0.2);
+}
+
+#speakers .speaker img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%; /* Imagens redondas */
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+    margin-bottom: 15px;
+    border: 4px solid #fff; /* Borda branca "glossy" */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#speakers .speaker h3 {
+    color: #003366; /* Azul escuro */
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+#speakers .speaker p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+/* Estilização do Formulário */
+#registration-form div,
+#registration-form fieldset {
+    margin-bottom: 18px;
+}
+
+#registration-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #004080; /* Azul escuro para labels */
+}
+
+#registration-form input[type="text"],
+#registration-form input[type="email"] {
+    width: calc(100% - 24px); /* Largura total menos padding e borda */
+    padding: 12px;
+    border: 1px solid #b0c4de; /* Azul claro acinzentado para borda */
+    border-radius: 8px; /* Cantos arredondados */
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Fundo quase branco (AliceBlue) */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#registration-form input[type="text"]:focus,
+#registration-form input[type="email"]:focus {
+    border-color: #007bff; /* Azul mais vibrante no foco */
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Sombra de foco "glow" */
+}
+
+#registration-form input::placeholder {
+    color: #99aabb;
+}
+
+#registration-form fieldset {
+    border: 1px solid #b0c4de;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgba(220, 235, 250, 0.5);
+}
+
+#registration-form fieldset legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #004080;
+}
+
+#registration-form input[type="radio"],
+#registration-form input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #007bff; /* Cor do 'check' no radio/checkbox */
+}
+#registration-form input[type="checkbox"] + label a {
+    color: #0052d4;
+    text-decoration: none;
+}
+#registration-form input[type="checkbox"] + label a:hover {
+    text-decoration: underline;
+}
+
+
+#registration-form button[type="submit"] {
+    background: linear-gradient(to bottom, #67b26f, #4ca2cd); /* Gradiente verde para azul */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 25px; /* Botão bem arredondado "pill shape" */
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+#registration-form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+#registration-form button[type="submit"]:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #003366; /* Azul bem escuro */
+    color: #e0f0ff; /* Texto azul claro */
+    margin-top: auto; /* Empurra o rodapé para baixo */
+    border-top: 3px solid #67b26f; /* Detalhe verde */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header .subtitle {
+        font-size: 1rem;
+    }
+    section h2 {
+        font-size: 1.8rem;
+    }
+    #speakers .speaker img {
+        width: 120px;
+        height: 120px;
+    }
+    #speakers .speaker h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 95%;
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 1.9rem;
+    }
+    section h2 {
+        font-size: 1.6rem;
+    }
+    #registration-form button[type="submit"] {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+}
+
